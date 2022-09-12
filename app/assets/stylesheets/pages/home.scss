@@ -1,0 +1,45 @@
+.home-container {
+  h1 {
+    margin: 0;
+  }
+
+  .profile {
+    background: $primary-background-color;
+    min-height: 80vh;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1000px;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+
+  .projects {
+    background: $secondary-background-color;
+  }
+
+  .about-me {
+    background: $primary-background-color;
+  }
+
+  .contact {
+    background: $secondary-background-color;
+  }
+}
