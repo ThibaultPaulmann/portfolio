@@ -13,7 +13,6 @@
   .start-popup {
     display: none;
     position: fixed;
-    opacity: 0.6;
     width: 100vw;
     height: 100vh;
     background-color: white;
@@ -33,16 +32,12 @@
         height: 300px;
         background-color: $primary-background-color;
         margin-bottom: 40px;
-        animation: flipH 1.5s linear;
+        animation: enter 1.5s linear;
       }
     }
   }
 
-  .active {
-    display: block;
-  }
-
-  @keyframes flipH {
+  @keyframes enter {
     0% {
       transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
       transform-origin: 50% 0%;
@@ -59,6 +54,10 @@
     to {
       transform: rotateY(360deg);
     }
+  }
+
+  .active {
+    display: block;
   }
 
   .profile {
@@ -129,6 +128,19 @@
     .contact-icon {
       font-size: 30px;
       color: white;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1.5s ease;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
