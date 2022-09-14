@@ -1,7 +1,8 @@
 <div class="home-container">
   <div class="start-popup" data-controller="startup" data-startup-target="popup" data-action="click->startup#remove">
     <div class="popup-content">
-      <div class="logo">
+      <div class="logo-container">
+        <%= image_tag "logo.png", class: "logo"%>
       </div>
       <h1> Thibault Paulmann</h1>
     </div>
@@ -60,5 +61,6 @@
   </div>
   <div class="contact">
     <h1>Contact me</h1>
+    <div><%= fa_icon "github", class: "contact-icon" %></div>
   </div>
 </div>

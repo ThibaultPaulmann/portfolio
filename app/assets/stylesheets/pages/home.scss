@@ -33,12 +33,32 @@
         height: 300px;
         background-color: $primary-background-color;
         margin-bottom: 40px;
+        animation: flipH 1.5s linear;
       }
     }
   }
 
   .active {
     display: block;
+  }
+
+  @keyframes flipH {
+    0% {
+      transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+      transform-origin: 50% 0%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+      transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
   }
 
   .profile {
@@ -105,5 +125,10 @@
 
   .contact {
     background: $secondary-background-color;
+
+    .contact-icon {
+      font-size: 30px;
+      color: white;
+    }
   }
 }
