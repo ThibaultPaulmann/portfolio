@@ -1,0 +1,10 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+
+  .project-img {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 280px;
+  }
+}
